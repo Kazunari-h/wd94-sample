@@ -1,0 +1,98 @@
+footer {
+    padding-top: 50px;
+    text-align: center;
+}
+
+/* 全体のCSS */
+.flex-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-main {
+    width: 80%;
+}
+
+/* サイドバー関連のCSS */
+.sidebar {
+    width: 20%;
+    list-style: none;
+}
+
+.sidebar li {
+    margin: 10px;
+}
+
+.sidebar-list::before {
+    font-family: "FontAwesome";
+    content: "\f042";
+    margin-right: 5px;
+}
+
+.focus {
+    font-weight: bold;
+    color: #656565;
+}
+
+.focus::before {
+    font-family: "FontAwesome";
+    content: "\f150";
+    margin-right: 5px;
+}
+
+
+/* Footerのスタイル */
+.footer ul li {
+    margin-right: 0.5rem;
+}
+
+.footer ul li::before {
+    content: "/";
+    margin-right: 0.5rem;
+}
+
+.footer ul :first-child::before {
+    content: "";
+}
+
+.footer ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.box {
+    padding: 3rem;
+    margin: 2rem;
+}
+
+.footer {
+    margin-top: auto;
+}
+
+#container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.cell-link {
+    margin: 5px 20px;
+    color: #AAA;
+}
+
+.cell-link span {
+    padding-right: 1rem;
+}
+
+.cell-link:nth-child(1):hover {
+    color: pink;
+}
+
+.cell-link:nth-child(2):hover {
+    color: skyblue;
+}
+
+.cell-link:nth-child(3):hover {
+    color: crimson;
+}
