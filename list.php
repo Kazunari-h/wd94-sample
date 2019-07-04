@@ -78,7 +78,6 @@ if (
                 </nav>
             </div>
         </div>
-
     </article>
 </div>
 <?php
