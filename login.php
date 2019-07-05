@@ -79,7 +79,6 @@ if (empty($password) || empty($email)) {
     }
 }
 
-$page_title = "ログインエラー";
 $call_url = "";
 $error = true;
 include "./message.php";

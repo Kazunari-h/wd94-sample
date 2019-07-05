@@ -2,18 +2,38 @@
 // ==============================
 // 検索入力画面のPHPファイル
 // ==============================
-$page_title = "検索画面 | 掲示板システム";
 include "./header.php";
 ?>
-<p>
-    検索すると投稿が表示されます。
-</p>
-<form action="./search.php" method="post">
-    <input type="text" name="keyword">
-    <button type="submit">
-        検索する
-    </button>
-</form>
+<div class="section">
+    <form action="./search-input.php" method="post">
+        <div class="title is-4">検索フォーム</div>
+        <div class="field is-expanded">
+            <div class="field has-addons">
+                <div class="control has-icons-left ">
+                    <input class="input" type="text" placeholder="キーワード検索" name="keyword">
+                    <span class="icon is-small is-left">
+                        <i class="fas fa-search"></i>
+                    </span>
+                </div>
+                <div class="control">
+                    <button type="submit" class="button is-info">
+                        検索する
+                    </button>
+                </div>
+
+            </div>
+            <p class="help">名前とコメントからキーワードを検索します。</p>
+        </div>
+    </form>
+</div>
+
+<div class="section">
+<?php
+if (isset($_POST["keyword"])) {
+    include "./search.php";
+}
+?>
+</div>
 <?php
 include "./footer.php";
 ?>

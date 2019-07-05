@@ -10,20 +10,20 @@ $genre = array(
     '天ぷら' => "#",
     'そば' => "#",
     '焼きそば' => "#",
-    'お好み焼き' => "#"
+    'お好み焼き' => "#",
 );
 ?>
 <div class="flex-container">
     <nav class="sidebar">
         <ul>
             <?php
-            foreach ($genre as $name => $url) {
-                if ($name == $focus) {
-                    echo "<li class=\"focus\">$name</li>";
-                } else {
-                    echo "<li class=\"sidebar-list\"><a href=\"$url\">$name</a></li>";
-                }
-            }
-            ?>
+foreach ($genre as $name => $url) {
+    if ($name == $focus) {
+        echo "<li class=\"focus\">$name</li>";
+    } else {
+        echo "<li class=\"sidebar-list\"><a href=\"$url\">$name</a></li>";
+    }
+}
+?>
         </ul>
     </nav>

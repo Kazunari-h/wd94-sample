@@ -13,7 +13,6 @@ if (isset($_SESSION["email"])) {
     // 処理をここで終わらせる
     exit();
 }
-$page_title = "ログイン";
 include "./header.php";
 ?>
 
@@ -25,13 +24,13 @@ include "./header.php";
     <div class="column is-7">
         <div class="box">
             <div class="field">
-                <label class="label">Mail</label>
+                <label class="label">メールアドレス</label>
                 <p class="control">
                     <input class="input" type="email" placeholder="メールアドレス" name="email" form="login-form" require>
                 </p>
             </div>
             <div class="field">
-                <label class="label">Password</label>
+                <label class="label">パスワード</label>
                 <p class="control">
                     <input class="input" type="password" placeholder="パスワード" name="password" form="login-form" require>
                 </p>
@@ -47,10 +46,10 @@ include "./header.php";
                     <button type="submit" form="login-form" class="button is-link">ログイン</button>
                 </div>
                 <div class="control">
-                    <button type="submit" form="login-form" class="button is-success">新規登録</button>
+                    <button form="login-form" class="button is-success">新規登録</button>
                 </div>
             </div>
         </div>
     </div>
     <?php
-    include "./footer.php";
+include "./footer.php";

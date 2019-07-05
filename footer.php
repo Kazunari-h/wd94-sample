@@ -2,7 +2,6 @@
 include "./common/env.php";
 ?>
 </div>
-</div>
 </section>
 
 <footer class="footer">
@@ -19,7 +18,7 @@ include "./common/env.php";
         </ul>
     </nav>
     <p>
-        Copyright 2019 hirosawa
+        <small>Copyright 2019 <a href="">hirosawa</a></small>
     </p>
 </footer>
 </div>
