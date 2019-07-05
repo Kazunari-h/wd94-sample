@@ -9,5 +9,5 @@
     <link rel="stylesheet" href="./common.css">
 
     <?php if (!$error && !empty($call_url)) { ?>
-        <meta http-equiv="refresh" content=" 2; url=./<?= $call_url ?>>">
+        <meta http-equiv="refresh" content=" 2; url=./<?= $call_url ?>">
     <?php } ?>
