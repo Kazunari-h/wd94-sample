@@ -10,12 +10,12 @@ footer {
 }
 
 .flex-main {
-    width: 80%;
+    width: 70%;
 }
 
 /* サイドバー関連のCSS */
 .sidebar {
-    width: 20%;
+    width: 30%;
     list-style: none;
 }
 
@@ -40,8 +40,42 @@ footer {
     margin-right: 5px;
 }
 
+.hero {
+    /* background: -moz-linear-gradient(left, #ED1674, #FFC400);
+    background: -webkit-linear-gradient(left, #ED1674, #FFC400);
+    background: linear-gradient(to right, #ED1674, #FFC400); */
+
+    background: -moz-linear-gradient(left, #00d1b2, #3273dc);
+    background: -webkit-linear-gradient(left, #00d1b2, #3273dc);
+    background: linear-gradient(to right, #00d1b2, #3273dc);
+
+}
+
+.hero .title,
+.hero .subtitle {
+    color: white;
+}
 
 /* Footerのスタイル */
+
+.footer {
+    background: -moz-linear-gradient(left, #00d1b2, #3273dc);
+    background: -webkit-linear-gradient(left, #00d1b2, #3273dc);
+    background: linear-gradient(to right, #00d1b2, #3273dc);
+    color: white;
+}
+
+
+.footer a:link,
+.footer a:visited {
+    color: white;
+}
+
+.footer a:active,
+.footer a:hover {
+    color: #fcf594;
+}
+
 .footer ul li {
     margin-right: 0.5rem;
 }
@@ -59,6 +93,7 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    margin-bottom: 1rem
 }
 
 .box {

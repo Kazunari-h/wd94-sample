@@ -1,51 +1,36 @@
-<?php include "./common/common.php"; ?>
+<?php
+include "./common/common.php";
+$bt = debug_backtrace();
+$filename = basename($bt[0]['file'], ".php");
+?>
 <!DOCTYPE html>
 <html lang="ja">
 
 <head>
-    <?php include "./common/head.php"; ?>
-    <title><?= $page_title ?></title>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-
-            // Get all "navbar-burger" elements
-            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
-
-            // Check if there are any navbar burgers
-            if ($navbarBurgers.length > 0) {
-
-                // Add a click event on each of them
-                $navbarBurgers.forEach(el => {
-                    el.addEventListener('click', () => {
-
-                        // Get the target from the "data-target" attribute
-                        const target = el.dataset.target;
-                        const $target = document.getElementById(target);
-
-                        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-                        el.classList.toggle('is-active');
-                        $target.classList.toggle('is-active');
-
-                    });
-                });
-            }
-
-        });
-    </script>
+    <?php include "./common/head.php";?>
+    <title><?=get_page_title($filename) . " | " . $site_name?></title>
 </head>
 
 <body>
     <div id="container">
         <section class="section">
             <div class="container">
-                <?php getNav(); ?>
+                <?php get_navigation();?>
             </div>
         </section>
-        <section class="section">
 
-            <div class="container">
-                <h1 class="title">
-                    <?= $page_title ?>
-                </h1>
+        <section class="hero">
+            <div class="hero-body">
+                <div class="container">
+                    <h1 class="title">
+                        <?=get_page_title($filename)?>
+                    </h1>
+                    <h2 class="subtitle">
+                        <?=get_page_subtitle($filename)?>
+                    </h2>
+                </div>
             </div>
+        </section>
+
+        <section class="section">
             <div class="container">

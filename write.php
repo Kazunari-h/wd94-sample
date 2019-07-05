@@ -62,6 +62,5 @@ if (!$error) {
     }
 }
 
-$page_title = "書き込み完了";
 $call_url = "list.php";
 include "./message.php";
