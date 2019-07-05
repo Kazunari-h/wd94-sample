@@ -2,6 +2,7 @@
 // ==============================
 // 検索入力画面のPHPファイル
 // ==============================
+session_start();
 include "./header.php";
 ?>
 <div class="section">
@@ -10,7 +11,8 @@ include "./header.php";
         <div class="field is-expanded">
             <div class="field has-addons">
                 <div class="control has-icons-left ">
-                    <input class="input" type="text" placeholder="キーワード検索" name="keyword">
+                    <input class="input" type="text" placeholder="キーワード検索" name="keyword"
+                        <?=(isset($_POST["keyword"])) ? "value=\"" . $_POST["keyword"] . "\"" : "";?>>
                     <span class="icon is-small is-left">
                         <i class="fas fa-search"></i>
                     </span>
@@ -20,7 +22,6 @@ include "./header.php";
                         検索する
                     </button>
                 </div>
-
             </div>
             <p class="help">名前とコメントからキーワードを検索します。</p>
         </div>
