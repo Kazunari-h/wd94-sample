@@ -13,7 +13,7 @@ include "./header.php";
                 <div class="field">
                     <label class="label">名前</label>
                     <div class="control">
-                        <input name="name"  v-model="name" class="input" type="text" placeholder="田中 太郎">
+                        <input name="name"  v-model="name" class="input" type="text" placeholder="令和 太郎">
                     </div>
                 </div>
                 <div class="field">

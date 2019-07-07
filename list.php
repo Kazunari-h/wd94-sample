@@ -51,7 +51,7 @@ try {
 
     // POSTテーブルから投稿一覧を表示
     // SQLの実行
-    $count = 6; //表示件数
+    $count = 2; //表示件数
     $offset = ($page_count - 1) * $count;
     echo "<div class=\"flex-main\">";
 
@@ -92,13 +92,24 @@ try {
             LIMIT  $count OFFSET  $offset"
         );
 
-
         // データを読み込む
-        while ($row =  $stmt->fetch()) {
+        while ($row = $stmt->fetch()) {
             // 投稿ごとのHTMLの出力
             get_post_cell($row);
         }
-    } else {
+
+        ?>
+<div class="buttons  is-centered">
+    <?php
+        for ($i = 1; $i <= ceil($all_count / $count); $i++) {
+            $disabled = ($i == $page_count) ? "disabled" : "" ;
+            $href = ($i == $page_count) ? "" : "href=\"./list.php?page_count=$i\"";
+            echo "<a $href class=\"button\" $disabled>$i</a>";
+        }
+    ?>
+</div>
+<?php
+} else {
         echo "<p>投稿はありません。</p>";
     }
     echo "</div>";
