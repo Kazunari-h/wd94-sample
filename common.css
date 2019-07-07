@@ -131,3 +131,26 @@ footer {
 .cell-link:nth-child(3):hover {
     color: crimson;
 }
+
+.swiper-container {
+    margin:0 2rem;
+}
+
+.swiper-slide {
+    width:75%;
+}
+
+.swiper-slide>div {
+    height:100%;
+    padding: 2.5rem 1.25rem;
+}
+
+.swiper-button-next, .swiper-button-prev {
+    width: 2em;
+    position: absolute;
+    top: 50%;
+    margin-top: -1rem;
+    z-index: 10;
+    cursor: pointer;
+    background: none;
+}

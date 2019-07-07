@@ -41,19 +41,49 @@ try {
     $all_count = intval($row["count"]);
 
     /*
-1ページ目 1-5件目
-2ページ目 6-10件目
-3ページ目 11-15件目
-4ページ目 16-20件目
-5ページ目 21-25件目
-6ページ目 26-30件目
-*/
+    1ページ目 1-5件目
+    2ページ目 6-10件目
+    3ページ目 11-15件目
+    4ページ目 16-20件目
+    5ページ目 21-25件目
+    6ページ目 26-30件目
+    */
 
     // POSTテーブルから投稿一覧を表示
     // SQLの実行
     $count = 6; //表示件数
     $offset = ($page_count - 1) * $count;
     echo "<div class=\"flex-main\">";
+
+    ?>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                    <div class="notification">
+                        Primar lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit lorem ipsum dolor. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Sit amet,
+                        consectetur adipiscing elit
+                    </div>
+            </div>
+            <div class="swiper-slide">
+                    <div class="notification">
+                        Primar lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit lorem ipsum dolor. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Sit amet,
+                        consectetur adipiscing elit
+                    </div>
+            </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next">
+            <i class="fas fa-arrow-alt-circle-right fa-2x"></i>            
+        </div>
+        <div class="swiper-button-prev">
+            <i class="fas fa-arrow-alt-circle-left fa-2x"></i>
+        </div>
+    </div>
+    <?php
 
     if ($all_count >  $offset) {
         $stmt =  $pdo->query(
