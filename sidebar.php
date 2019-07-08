@@ -12,6 +12,8 @@ $genre = array(
     '焼きそば' => "#",
     'お好み焼き' => "#",
 );
+
+// https://codepen.io/takanorip/pen/grZpOp
 ?>
 <div class="flex-container">
     <nav class="sidebar">

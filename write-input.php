@@ -1,6 +1,10 @@
 <?php
 // ログインの確認をする
 session_start();
+if (!isset($_SESSION["email"])) {
+    header("Location: ./login-input.php");
+    exit;
+}
 include "./common/functions.php";
 
 include "./header.php";
