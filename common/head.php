@@ -9,7 +9,7 @@
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js" integrity="sha256-uckMYBvIGtce2L5Vf/mwld5arpR5JuhAEeJyjPZSUKY=" crossorigin="anonymous"></script>
 
     <!-- CSSの読み込み -->
-    <link rel="stylesheet" href="./common.css">
+    <link rel="stylesheet" href="./common/common.css">
     <!-- JSの読み込み -->
     <script defer src="./common/common.js"></script>
 
