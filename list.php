@@ -55,29 +55,31 @@ try {
     $offset = ($page_count - 1) * $count;
     echo "<div class=\"flex-main\">";
 
+    include "./common/breadcrumb.php";
+
     ?>
     <div class="swiper-container">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
-                    <div class="notification">
-                        Primar lorem ipsum dolor sit amet, consectetur
-                        adipiscing elit lorem ipsum dolor. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Sit amet,
-                        consectetur adipiscing elit
-                    </div>
+                <div class="notification">
+                    Primar lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit lorem ipsum dolor. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Sit amet,
+                    consectetur adipiscing elit
+                </div>
             </div>
             <div class="swiper-slide">
-                    <div class="notification">
-                        Primar lorem ipsum dolor sit amet, consectetur
-                        adipiscing elit lorem ipsum dolor. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Sit amet,
-                        consectetur adipiscing elit
-                    </div>
+                <div class="notification">
+                    Primar lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit lorem ipsum dolor. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Sit amet,
+                    consectetur adipiscing elit
+                </div>
             </div>
         </div>
         <!-- Add Pagination -->
         <div class="swiper-pagination"></div>
         <!-- Add Arrows -->
         <div class="swiper-button-next">
-            <i class="fas fa-arrow-alt-circle-right fa-2x"></i>            
+            <i class="fas fa-arrow-alt-circle-right fa-2x"></i>
         </div>
         <div class="swiper-button-prev">
             <i class="fas fa-arrow-alt-circle-left fa-2x"></i>
@@ -99,17 +101,17 @@ try {
         }
 
         ?>
-<div class="buttons  is-centered">
+        <div class="buttons  is-centered">
+            <?php
+            for ($i = 1; $i <= ceil($all_count / $count); $i++) {
+                $disabled = ($i == $page_count) ? "disabled" : "";
+                $href = ($i == $page_count) ? "" : "href=\"./list.php?page_count=$i\"";
+                echo "<a $href class=\"button\" $disabled>$i</a>";
+            }
+            ?>
+        </div>
     <?php
-        for ($i = 1; $i <= ceil($all_count / $count); $i++) {
-            $disabled = ($i == $page_count) ? "disabled" : "" ;
-            $href = ($i == $page_count) ? "" : "href=\"./list.php?page_count=$i\"";
-            echo "<a $href class=\"button\" $disabled>$i</a>";
-        }
-    ?>
-</div>
-<?php
-} else {
+    } else {
         echo "<p>投稿はありません。</p>";
     }
     echo "</div>";
